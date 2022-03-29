@@ -1,0 +1,20 @@
+# https://en.wikipedia.org/wiki/Sorting_algorithm#Exchange_sort
+# https://github.com/TheAlgorithms/Python/tree/master/sorts
+>>> exchange_sort([5, 4, 3, 2, 1])
++    [1, 2, 3, 4, 5]
++    >>> exchange_sort([-1, -2, -3])
++    [-3, -2, -1]
++    >>> exchange_sort([1, 2, 3, 4, 5])
++    [1, 2, 3, 4, 5]
++    >>> exchange_sort([0, 10, -2, 5, 3])
++    [-2, 0, 3, 5, 10]
++    >>> exchange_sort([])
++    []
++    """
+numbers_count = len(number)
+for i in range(numbers_count):
+    for j in range(i + 1, numbers_count):
+        if numbers[j] < numbers[i]:
+            numbers[i], numbers[j] = numbers[j], numbers[i]
+    return numbers
+
