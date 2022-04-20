@@ -40,6 +40,8 @@ def AA_supervisé_knn():
     # instantiate learning model (k = 3)
     model = KNN(n_neighbors=3)
 
+
+#validation croisée sur X_train et Y_train
     # fitting the model
     model.fit(X_train, y_train)
 
@@ -47,7 +49,10 @@ def AA_supervisé_knn():
     pred = model.predict(X_test)
 
     # evaluate accuracy
-    print(accuracy_score(y_test, pred))
+
+    acc_knn = accuracy_score(y_test, pred)
+    print(f'Le score de précision de l\'algorithme KNN est de {acc_knn}. C\'est une précision somme toute plutôt médiocre, puisqu\'elle est sous le niveau de chance.')
+
 
 
 #fonction pour utiliser l'algorithme SVM
@@ -149,7 +154,6 @@ def SVM():
            title="Caractéristiques permettant de prédire le stress")
     ax.legend(loc="lower right")
     plt.show()
-
 
 
 

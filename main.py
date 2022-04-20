@@ -4,7 +4,11 @@ import pandas as pd
 data_frame = pd.read_excel(r'data_base_ACE_erreurs.xlsx')
 data_frame.to_csv()
 
+#PRE : Importer la base de données en format SQL
 
+from A_traitement_donnees import SQL_fct
+
+SQL_fct.convert_SQL(data_frame)
 
 #A : Traitement des données
 from A_traitement_donnees import A_script_data

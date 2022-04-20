@@ -99,8 +99,7 @@ def data(data_frame):
             valeur = df1[col][index]
             if valeur == ' 'or valeur == '#NULL!' or valeur == 'NaN':
                 df1[col][index] = valeur.replace(valeur, 'nan')
-                #Option de voir les cellules qui ont été modifiées lors de la boucle
-                #print(f'la valeur à la position {col} {index} était {prev_value} a été modifiée pour {df1[col][index]}')
+
 
 
     # Modification des valeurs manquantes par float(NaN)

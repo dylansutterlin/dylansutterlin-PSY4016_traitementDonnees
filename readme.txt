@@ -1,6 +1,11 @@
 
 Projet s'intéressant au lien entre le stress, l'estime de soi et les expériences adverses
 
+================================
+Pour exécuter le script :
+	-exécuter seulement le fichier python main.py
+
+================================
 DESCRIPTION PROJET
 Les données utilisées dans ce projet proviennent d’une étude de Raymond et collaborateurs, (2021), qui s’est intéressé à la relation entre l’Adversité précoce (AP) – des expérience(s) adverse(s) vécues pendant l’enfance comme la pauvreté ou la maltraitance – et la réponse de stress. Les variables principales sont des mesures d’AP, soit 1) L’âge de la première exposition à l’expérience adverse, 2) Le nombre de types d’expériences adverses vécues dans l’enfance (échelle nominale de 0-13 – score déterminé par un questionnaire) et 3) Des mesures de cortisol (la principale hormone de stress) à plusieurs temps lors d’une tâche visant à stresser des participants. Faisant partie d’un projet doctoral plus vaste, la base de données comporte également d’autres variables, dont une mesure d’estime de soi. 
 Les variables numériques (échelles à intervalles et continues):
@@ -25,8 +30,8 @@ Variable y : Concentration salivaire de cortisol(microgramme/mol)
 Variable x : nombre de types différents d’adversité vécus
 Variable y : Concentration salivaire de cortisol(microgramme/mol)
 
-
-DSECRIPTION DU SCRIPT
+================================
+DSECRIPTION DU SCRIPT (+ rapport descriptif des résultats)
 1. Descriptions des variables
 
 'UID' : Id. du participants

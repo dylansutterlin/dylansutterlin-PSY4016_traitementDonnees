@@ -11,7 +11,11 @@ class Analyse_stats:
 
         #Régression entre l'estime de soi et les niveaux de cortisol basal
         model = ols("AUCiTSST ~ RSE_Sum + Sex", X_data).fit()
-        print(model.summary())
+        print( model.summary())
+
+        #valeur p
+        p_reg1 = 0.295
+        print('l\'hypothèse était que le nombre d\'expériences adverses différent qu\'une personne a vécu serait un bon prédicteur du cortisol réactif en contrôlant pour le sex. On se serait attendu à une association positive entre ces variables. La régression suggère que ces deux variables ne sont pas liées, car Béta = -0.0896,  et p = {}. L\'hypothèse est donc infirmée'.format(p_reg1))
 
         #Graphique de la relation entre l'estime de soi et cortisol basal
         plt.style.use('seaborn-white')
@@ -34,7 +38,14 @@ class Analyse_stats:
 
         #Régression entre Estime de Soi et Cortisol réactif chez tout les travailleurs
         model = ols("AUCiTSST ~ ACEsum + Sex", X_data).fit()
+
+        #valeur p
+        p_reg2 = 0.316
+
+        #**FORMATAGE DE CHAINE
         print(model.summary())
+        print('l\'hypothèse était que l\'estime de soi serait un bon prédicteur du cortisol réactif en contrôlant pour le sex. On se serait attendu à une association négative entre les deux variables. La régression suggère que ces deux variables ne sont pas liées, car Béta = -0.0064 et p = {}. L\'hypothèse est donc infirmée'.format(p_reg2))
+
 
         #Graphique de la régression entre le type différent d'expériences adverses et le cortisol réactif
         plt.style.use('seaborn-white')
@@ -44,5 +55,7 @@ class Analyse_stats:
         plt.xlabel("type différent d'expériences adverses", fontsize=10)
         plt.ylabel("cortisol réactif", fontsize=10)
         plt.show()
+
+
 
 
