@@ -46,5 +46,5 @@ def AA_non_supervisé_PCA():
     plt.xlabel('nombre de composants')
     plt.ylabel('variance expliquée cumulative');
     plt.show()
-AA_non_supervisé_PCA()
+
 

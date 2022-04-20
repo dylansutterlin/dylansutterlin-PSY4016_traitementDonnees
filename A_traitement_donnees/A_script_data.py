@@ -2,6 +2,8 @@
 import pandas as pd
 data_frame = pd.read_excel(r'data_base_ACE_erreurs.xlsx')
 data_frame.to_csv()
+
+#Fonction pour faire le prétraitement des données
 def data(data_frame):
 
     #Faire un back up du df1
@@ -55,6 +57,7 @@ def data(data_frame):
 
                             if position.isdigit() is False:
                                 cell = cell.replace(position, '')
+
                         #Option de voir la cellule qui a été changée
                         #print(f'La cellule à la colonne {col} et à la ligne {index} était {temp} mais a été changée pour {cell} ' )
 
@@ -82,6 +85,8 @@ def data(data_frame):
                 df1[EA] = df1[EA].astype(float)
 
     print(df1.head())
+
+    #**Contrôle des valeurs manquantes**
     #voir le type de données pour chaque colonne
     #puis uniformiser les valeurs manquantes pour qu'elles soient toutes NaN
     #Cela permettra par la suite de remplacer ces valeurs par e.g. la moyenne ou la médiane de la colonne
@@ -132,7 +137,7 @@ def data(data_frame):
     df2 = df1.copy(deep = True)
     df2.to_csv('data_base_ACE_erreurs2.csv')
 
-    print(df2.head())
 
-data(data_frame)
+
+
 

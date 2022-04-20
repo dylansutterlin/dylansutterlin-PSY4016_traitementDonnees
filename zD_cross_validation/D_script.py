@@ -1,5 +1,5 @@
 
-def courbeROC():
+def SVM():
     import pandas as pd
     import numpy as np
     import matplotlib.pyplot as plt
@@ -9,14 +9,17 @@ def courbeROC():
     import sklearn.model_selection
     import sklearn.svm
     import sklearn.metrics
+
     X_data = pd.read_csv('data_base_ACE_erreurs2.csv')
 
     #Création d'une variable catégorielle pour le cortisol
     X_data['cortisol_categ'] = X_data['AUCiTSST']
 
+    #Extraction de la moyenne
     mean_cort = X_data['AUCiTSST'].mean()
 
-    #Boucle pour couper les valeurs de cortisol en deux groupes
+    #Boucle pour couper mettre les valeurs de stress comme variables catégorielle
+    #en les comparant à la moyenne
     for index in range(0, len(X_data.AUCiTSST)):
         value = X_data['cortisol_categ'][index]
         if value <= mean_cort :
@@ -96,4 +99,4 @@ def courbeROC():
     plt.show()
 
 
-courbeROC()
+

@@ -1,3 +1,4 @@
+
 Projet s'intéressant au lien entre le stress, l'estime de soi et les expériences adverses
 
 DESCRIPTION PROJET
@@ -56,10 +57,11 @@ C. Analyses statistiques
 
 Les hypothèses étaient que l'estime de soi serait un bon prédicteur du cortisol réactif, en contrôlant pour le sex. On se serait attendu à une association négative entre les deux variables. La régression et le graphique (nuage de points) suggèrent que ces deux variables ne sont pas liées (Béta = -0.0896, P = ,295). On obtient des résultat similaire pour ce qui est de l'association entre le nombre d'expériences adverses différent qu'une personne a vécu et le cortisol réactif, en contrôlant pour le sex (Béta = -0.0064, p = ,316).
 
-D. Procédure de validation croisée et courbe ROC
+D. Procédure d'apprentissage supervisé
 
-Dans ce script, une procédure de validation croisée est initialisée.La courbe ROC est représenté graphiquement afin de voir le pouvoir prédictif du modèle en ce qui a trait à la prédiction de la réponse de stress (cortisol réactif).
+Dans ce script, une procédure de validation croisée est initialisée.L'algorithme KNN est implémenté. Ensuite l'algorithme SVM est implémenté puis sa courbe ROC est représentée graphiquement. 
 
-E. Apprentissage automatique supervisé
+E. Apprentissage automatique non- supervisé
+L'algorithme PCA est implémenté. Le output contient les composantes principales, la courbe ROC et un graphique des deux composantes principales.
 
-L'algorithme KNN est implémenté. Les variables sex, 
+ 

@@ -7,9 +7,10 @@ data_frame.to_csv()
 
 
 #A : Traitement des données
-#from A_traitement_donnees import script_data
+from A_traitement_donnees import A_script_data
 
-#script_data.data(data_frame)
+A_script_data.data(data_frame)
+
 
 #B : Statistiques descriptives
 from B_statistiques_descriptives import B_script
@@ -38,11 +39,24 @@ fct_regression.regression1()
 
 fct_regression.regression2()
 
-#D : Validation croisée et courbe ROC
 
-from D_cross_validation import D_script
+#D : Apprentissage supervisé, KNN et SVM
+#**graphique (courbe ROC) sera imprimée pour SVM
 
-D_script.courbeROC()
+from D_AA_supervisé import D_script
+
+D_script.AA_supervisé_knn()
+
+D_script.SVM()
+
+#E : Apprentissage non-suoervisé, PCA
+#**graphique sera imprimé pour PCA
+
+from  E_AA_non_supervisé import E_script
+
+E_script.AA_non_supervisé_PCA()
 
 
-E : Apprentissage automatique supervisé
+
+
+
